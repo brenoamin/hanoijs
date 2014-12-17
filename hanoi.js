@@ -71,8 +71,11 @@ function Hanoi(s) { // mediator pattern
 }
 
 
+/*
+
 var game = new Hanoi(7);
 game.show();
 game.solve();
 game.show();
 
+*/
