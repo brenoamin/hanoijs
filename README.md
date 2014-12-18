@@ -25,6 +25,6 @@ END IF
 
 ### Running tests
 
-'''
+```
 mocha hanoi_spec.js
-'''
+```
