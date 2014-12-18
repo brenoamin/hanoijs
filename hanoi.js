@@ -81,10 +81,9 @@ function Hanoi(s) { // mediator pattern
 }
 
 
-module.exports.getGame = function() {
-	var game = new Hanoi(7);
-	return game;
-}
+module.exports.Stack = Stack;
+module.exports.Hanoi = Hanoi;
+
 
 /*
 

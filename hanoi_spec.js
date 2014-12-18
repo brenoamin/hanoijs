@@ -4,7 +4,7 @@ var chai = require('chai'),
     expect = chai.expect,
     should = chai.should(),
     assert = chai.assert,
-    hanoi = require('./hanoi.js');
+    cglobal = require('./hanoi.js');
 
 Object.size = function(obj) {
     var size = 0, key;
@@ -15,7 +15,7 @@ Object.size = function(obj) {
 };
 
 describe('ValidStack', function() {
-  var game = hanoi.getGame();
+  var game = new cglobal.Hanoi(7);
   var towers = game.getTowers();
   it('3 memory stack', function() {
   		towers.should.be.a('object');
@@ -32,9 +32,10 @@ describe('ValidStack', function() {
   });
   it('Solution is working',function() {
   	   game.solve();
+  	   game.show();
   	   expect(towers[0].count()).to.equal(0);
-  	   expect(towers[0].count()).to.equal(7);
-  	   expect(towers[0].count()).to.equal(0);
+  	   expect(towers[1].count()).to.equal(7);
+  	   expect(towers[2].count()).to.equal(0);
   });
 
 
