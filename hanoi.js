@@ -61,6 +61,9 @@ function Hanoi(s) { // mediator pattern
 				}				
 			}
 			solution(towers[0].count(),0,1,2);
+		},
+		getCounter: function() { 
+			return counter;
 		}
 	}
 
@@ -70,6 +73,9 @@ function Hanoi(s) { // mediator pattern
 	return methods;
 }
 
+module.exports.createBoard = function() {
+
+}
 
 /*
 
