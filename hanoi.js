@@ -22,6 +22,9 @@ function Stack(n) {
 		},
 		show: function() {
 			console.log(_stack);
+		},
+		getElements: function() {
+			return JSON.parse(JSON.stringify(_stack));
 		}
 	}
 }
@@ -47,7 +50,7 @@ function Hanoi(s) { // mediator pattern
 			for(var i=0; i<index; i++) towers[i].show();
 			if(counter>0) console.log("Total movements: " + counter);
 			console.log("******************************************");
-		},
+		},	
 		solve: function() {
 			counter = 0;
 			var solution = function(disk,source,dest,spare) {
@@ -61,7 +64,14 @@ function Hanoi(s) { // mediator pattern
 				}				
 			}
 			solution(towers[0].count(),0,1,2);
+		},
+		getCounter: function() { 
+			return counter;
+		},
+		getTowers: function() {
+			return towers;
 		}
+
 	}
 
 	methods.addTower(new Stack(size));
@@ -71,11 +81,11 @@ function Hanoi(s) { // mediator pattern
 }
 
 
+module.exports.Stack = Stack;
+module.exports.Hanoi = Hanoi;
+
+
 /*
 
-var game = new Hanoi(7);
-game.show();
-game.solve();
-game.show();
 
 */

@@ -5,7 +5,7 @@ Recursive approach using nodejs (javascript) with a Mediator Pattern.
 ### Requerimients
 
     nodejs
-    mocha (npm)
+    mocha (npm,global)
     chai  (npm)
 
 ### Recursive solution
@@ -21,4 +21,10 @@ ELSE:
     move disk from source to dest              // Step 2 above
     MoveTower(disk - 1, spare, dest, source)   // Step 3 above
 END IF
+```
+
+### Running tests
+
+```
+mocha hanoi_spec.js
 ```
